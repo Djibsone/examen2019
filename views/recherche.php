@@ -50,7 +50,9 @@
                 <div class="form-group row my-3">
                     <label class="col-sm-2 col-form-label col-form-label-lg">Envoyer</label>
                     <div class="col-sm-2">
-                        <input type="submit" name="ok" class="form-control form-control-lg btn btn-outline-primary fw-bold" value="OK">
+                        <!-- <input type="submit" name="ok" class="form-control form-control-lg btn btn-outline-primary fw-bold" value="OK">
+                        <button type="submit" name="ok" class="form-control form-control-lg btn btn-outline-primary fw-bold" value="OK"> -->
+                        <input type="submit" class="ok" name="ok" value="OK">
                     </div>
                 </div>
             </form>
@@ -89,3 +91,21 @@
 <!-- footer start -->
 <?php include './views/footer.php' ?>
 <!-- footer end -->
+
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+</style>
+
+<!-- <table>
+  <tr>
+    <td>Colonne 1</td>
+    <td>Colonne 2</td>
+    <td>Colonne 3</td>
+  </tr>
+</table> -->
