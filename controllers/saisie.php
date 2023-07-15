@@ -13,7 +13,6 @@ if (isset($_POST['enregistrer'])) {
         if ($datnais && $ville && $sexe) {
             $stmt = addCandidat($nom, $prenom, $datnais, $ville, $sexe, $option);
             ($stmt) ? $_SESSION['success'] = 'Enregistrment effectué avec succès' : $_SESSION['error'] = 'Erreur d\'enregistrement';
-            //($stmt) ? header('Location: ../?s=' .base64_encode('Enregistrment effectué avec succès')) : header('Location: ../?e=' .base64_encode('Erreur d\'enregistrement'));
         } else {
             $datnais = null;
             $ville = null;
@@ -21,18 +20,14 @@ if (isset($_POST['enregistrer'])) {
 
             $stmt = addCandidat($nom, $prenom, $datnais, $ville, $sexe, $option);
             ($stmt) ? $_SESSION['success'] = 'Enregistrment effectué avec succès' : $_SESSION['error'] = 'Erreur d\'enregistrement';
-            //($stmt) ? header('Location: ../?s=' .base64_encode('Enregistrment effectué avec succès')) : header('Location: ../?e=' .base64_encode('Erreur d\'enregistrement'));
         }
         
     } else {
         $_SESSION['error'] = 'Nom, prénom et option sont obligatores';
-        //header('Location: ../?e=' .base64_encode('Nom, prénom et filière sont obligatores'));
     }
     
     // Fermer l'écriture de la session
     session_write_close();
     header('Location: ../');
-    //header('Location: ../?s=' . base64_encode($suc) . '&e=' . base64_encode($err));
-    //header('Location: ../?e=' . base64_encode($err));
 
 }

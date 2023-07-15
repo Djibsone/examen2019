@@ -11,6 +11,7 @@
 
     /* Styles CSS pour la header */
     header {
+      border: 1px solid #000;
       background-color: #f1f1f1;
       padding: 20px;
       text-align: center;
@@ -40,6 +41,7 @@
 
     /* Styles CSS pour la sidebar */
     .sidebar {
+      border: 1px solid #000;
       width: 250px;
       background-color: #f1f1f1;
       padding: 20px;
@@ -98,6 +100,9 @@
   font-size: large;
 }
 
+fieldset, .panel-body {
+  margin-left: 10px;
+}
 /*legende*/
 legend {
   color: #000;
@@ -141,6 +146,7 @@ select {
   flex: 1;
   padding: 10px;
   margin-right: 50%;
+  /* margin-left: 82px; */
   border: 1px solid #ccc;
 }
 
@@ -151,6 +157,7 @@ button[type="submit"] {
   background-color: transparent;
   color: #000;
   border: 1px solid #000;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -166,6 +173,7 @@ button[type="reset"] {
   background-color: transparent;
   color: #000;
   border: 1px solid #000;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -175,13 +183,26 @@ button:hover[type="reset"] {
 }
 
 /* recherche */
+.table-full-width {
+  width: 100vh;
+  height: 100px;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
 .ok {
   width: 100%;
   padding: 10px 20px 10px 20px;
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
   background-color: transparent;
   color: #000;
-  border: 1px solid #000; 
+  border: 1px solid #000;
+  border-radius: 5px; 
   cursor: pointer;
 }
 

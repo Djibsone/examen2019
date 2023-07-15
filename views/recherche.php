@@ -21,17 +21,15 @@
       <?php include './info.php' ?>
       <!-- info end -->
 
-      <div class="container-fluide m-3 mt-2">
+      <div class="container-fluide">
         <fieldset>
             <legend><h2>Réchercher les candidats dans une option</h2></legend>
-            <div class="form-group row my-2 mt-3">
-                <div class="col-sm-10">
-                    <?php include './msg_error_success.php' ?>
-                </div>
+            <div class="form-group">
+                <?php include './msg_error_success.php' ?> 
             </div>
             <form action="" method="post">
                 <div class="form-group row my-2">
-                    <label class="col-sm-2 col-form-label col-form-label-lg">Dans l'option</label>
+                    <label>Dans l'option</label>
                     <div class="col-sm-4">
                         <select class="form-control form-control-lg" name="option">
                             <option value="">Select option</option>
@@ -50,38 +48,38 @@
                 <div class="form-group row my-3">
                     <label class="col-sm-2 col-form-label col-form-label-lg">Envoyer</label>
                     <div class="col-sm-2">
-                        <!-- <input type="submit" name="ok" class="form-control form-control-lg btn btn-outline-primary fw-bold" value="OK">
-                        <button type="submit" name="ok" class="form-control form-control-lg btn btn-outline-primary fw-bold" value="OK"> -->
                         <input type="submit" class="ok" name="ok" value="OK">
                     </div>
                 </div>
             </form>
         </fieldset>
         
-        <div class="form-group row my-4">
+        <div class="form-group">
             <div class="panel-body">
-                <h2>LISTE DES CANDIDATS (<span class="text-danger"><?= ($total_cadits) ? $total_cadits : 0 ?></span>)</h2>
-                <table class="table table-bordered">
-                    <thead class="thead-light text-center">
-                        <tr>
-                            <th scope="col">NOM</th>
-                            <th scope="col">PRENOM</th>
-                            <th scope="col">SEXE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php foreach($candidats as $candidat): ?>
-
+                <h2>LISTE DES CANDIDATS (<span style="color: red"><?= ($total_cadits) ? $total_cadits : 0 ?></span>)</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-full-width">
+                        <thead class="">
                             <tr>
-                                <td><?= $candidat['nom'] ?></td>
-                                <td><?= $candidat['prenom'] ?></td>
-                                <td><?= $candidat['sexe'] ?></td>
+                                <th>NOM</th>
+                                <th>PRENOM</th>
+                                <th>SEXE</th>
                             </tr>
-                            
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+
+                            <?php foreach($candidats as $candidat): ?>
+
+                                <tr>
+                                    <td><?= $candidat['nom'] ?></td>
+                                    <td><?= $candidat['prenom'] ?></td>
+                                    <td><?= $candidat['sexe'] ?></td>
+                                </tr>
+                                
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -91,21 +89,3 @@
 <!-- footer start -->
 <?php include './views/footer.php' ?>
 <!-- footer end -->
-
-<style>
-  table {
-    border-collapse: collapse;
-  }
-  td {
-    border: 1px solid black;
-    padding: 10px;
-  }
-</style>
-
-<!-- <table>
-  <tr>
-    <td>Colonne 1</td>
-    <td>Colonne 2</td>
-    <td>Colonne 3</td>
-  </tr>
-</table> -->
