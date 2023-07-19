@@ -48,7 +48,7 @@
     <div class="form-group">
       <!-- <input type="reset" value="Effacer"> -->
       <button type="reset">Effacer</button>
-      <button type="submit" name="enregistrer">S'inscrire</button>
+      <button type="submit" name="enregistrer">Enregistrer</button>
   </div>
   </form>
 
