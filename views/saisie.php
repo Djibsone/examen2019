@@ -1,5 +1,5 @@
 <fieldset>
-  <legend><h2>Reingneinements</h2></legend>
+  <legend><h2>Renseignements</h2></legend>
   <div class="form-group">
     <?php include './views/msg_error_success.php' ?>
   </div>
