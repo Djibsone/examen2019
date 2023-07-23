@@ -49,14 +49,12 @@ function rechercheCandidats($option) {
     return $req;
 }
 
-// function rechercheCandidats($option){
-//     $db = dbConnect();
-
-//     $req = $db->prepare('SELECT nom,prenom,sexe FROM candidat WHERE codefil = LIKE "% ? %"');
-
-//     $req->execute(array($option));
-//     return $req;
-// }
+//recuperer les filieres
+function getFilieres(){
+    $db = dbConnect();
+    $req = $db->query('SELECT * FROM filiere ORDER BY codefil DESC');
+    return $req;
+}
 
 //Compter le nombre de candidat
 function countCandidats($option) {

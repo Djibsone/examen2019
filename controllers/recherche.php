@@ -15,3 +15,6 @@ if (isset($_POST['ok'])) {
         $_SESSION['error'] = 'Indiquez l\'option svp';
     } 
 }
+
+//les filieres
+$filieres = getFilieres();

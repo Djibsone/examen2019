@@ -1,3 +1,5 @@
+<?php include './controllers/getFiliere.php' ?>
+
 <fieldset>
   <legend><h2>Renseignements</h2></legend>
   <div class="form-group">
@@ -33,14 +35,8 @@
       <label for="">Option</label>
       <select name="option">
         <option>Select option</option>
-        <?php
-          require_once('./models/connexion.php'); 
-          $db = dbConnect();
-          $req = $db->query('SELECT * FROM filiere ORDER BY codefil DESC');
-          $filires = $req;
-          foreach($filires as $filire): 
-        ?>
-          <option value="<?= $filire['codefil'] ?>"><?= $filire['codefil'] ?></option>
+        <?php foreach($filieres as $filiere): ?>
+          <option value="<?= $filiere['codefil'] ?>"><?= $filiere['codefil'] ?></option>
         <?php endforeach; ?> 
       </select>
     </div>

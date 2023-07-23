@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_SESSION['success'])): ?>
     <div class="msg">
     <?php 
